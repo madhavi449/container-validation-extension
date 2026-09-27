@@ -1,15 +1,20 @@
 {
   "manifest_version": 3,
   "name": "Container Validation",
-  "version": "1.0",
-  "description": "Automates validation of container numbers.",
+  "version": "2.2.0",
+  "description": "Automates OceanCrest container validation.",
   "permissions": [
     "activeTab",
     "scripting",
-    "storage"
+    "storage",
+    "webNavigation",
+    "tabs",
+    "debugger"
   ],
   "host_permissions": [
-    "*://*/*"
+    "https://script.google.com/*",
+    "https://script.googleusercontent.com/*",
+    "https://*.googleusercontent.com/*"
   ],
   "background": {
     "service_worker": "background/service-worker.js"
@@ -17,11 +22,5 @@
   "action": {
     "default_popup": "popup/popup.html",
     "default_title": "Container Validation"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content/shipping-site.js"]
-    }
-  ]
+  }
 }

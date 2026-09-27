@@ -1,44 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Container Validation</title>
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
-    <div class="container">
-        <h2>Container Validation</h2>
-        
-        <div class="config">
-            <label>Apps Script Web App URL:</label>
-            <input type="text" id="appUrl" placeholder="https://script.google.com/macros/s/.../exec">
-            <button id="loadBtn">Load Containers</button>
+
+<div class="container">
+
+    <h2>Container Validation</h2>
+
+    <div class="config">
+
+        <label for="appUrl">
+            Apps Script Backend URL:
+        </label>
+
+        <input
+            type="text"
+            id="appUrl"
+            placeholder="https://script.google.com/macros/s/.../exec"
+        >
+
+        <button id="loadBtn">
+            Load Containers
+        </button>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div>
+            Total:
+            <span id="totalCount">0</span>
         </div>
 
-        <div class="stats">
-            <div>Total: <span id="totalCount">0</span></div>
-            <div>Processed: <span id="processedCount">0</span></div>
-            <div>Remaining: <span id="remainingCount">0</span></div>
-            <div class="match">MATCH: <span id="matchCount">0</span></div>
-            <div class="mismatch">MISMATCH: <span id="mismatchCount">0</span></div>
-            <div class="notfound">NOT FOUND: <span id="notFoundCount">0</span></div>
-            <div class="error">ERROR: <span id="errorCount">0</span></div>
-            <div class="error">Upload Failed: <span id="uploadFailedCount">0</span></div>
+        <div>
+            Processed:
+            <span id="processedCount">0</span>
         </div>
-        
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
+
+        <div>
+            Remaining:
+            <span id="remainingCount">0</span>
         </div>
-        
-        <div class="status-message" id="statusMessage">Configure URL and load containers.</div>
-        
-        <div class="controls">
-            <button id="startBtn" disabled>Start Validation</button>
-            <button id="stopBtn" disabled>Stop</button>
+
+        <div class="match">
+            MATCH:
+            <span id="matchCount">0</span>
         </div>
+
+        <div class="mismatch">
+            MISMATCH:
+            <span id="mismatchCount">0</span>
+        </div>
+
+        <div class="notfound">
+            NOT FOUND:
+            <span id="notFoundCount">0</span>
+        </div>
+
+        <div class="error">
+            ERROR:
+            <span id="errorCount">0</span>
+        </div>
+
+        <div class="error">
+            Upload Failed:
+            <span id="uploadFailedCount">0</span>
+        </div>
+
     </div>
-    
-    <script src="../utils/helpers.js"></script>
-    <script src="../utils/comparison.js"></script>
-    <script src="popup.js"></script>
+
+
+    <div class="progress-container">
+
+        <div
+            class="progress-bar"
+            id="progressBar"
+        ></div>
+
+    </div>
+
+
+    <div
+        class="status-message"
+        id="statusMessage"
+    >
+        Configure URL and load containers.
+    </div>
+
+
+    <div class="controls">
+
+        <button
+            id="startBtn"
+            disabled
+        >
+            Start Validation
+        </button>
+
+        <button
+            id="stopBtn"
+            disabled
+        >
+            Stop
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="../utils/helpers.js"></script>
+<script src="../utils/comparison.js"></script>
+<script src="popup.js"></script>
+
 </body>
 </html>
