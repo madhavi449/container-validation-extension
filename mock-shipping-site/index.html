@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Container Tracking - DEVELOPMENT/TEST ONLY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Global Shipping Co - Tracking Portal</h1>
+        <div class="warning">DEVELOPMENT / TEST ONLY</div>
+    </div>
+    
+    <div class="search-box">
+        <label>Container Number:</label>
+        <input type="text" id="containerSearchInput" placeholder="Enter container number">
+        <button id="searchButton">Search</button>
+    </div>
+    
+    <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <span>Searching database...</span>
+    </div>
+    
+    <div id="result" class="hidden">
+        <h3>Container Details</h3>
+        <p><strong>Container Number:</strong> <span id="containerNumber"></span></p>
+        <p><strong>Seal Number:</strong> <span id="sealNumber"></span></p>
+        <p><strong>Status:</strong> <span id="status"></span></p>
+        <p><strong>Location:</strong> <span id="location"></span></p>
+    </div>
+    
+    <div id="notFound" class="hidden error-msg">
+        Container not found.
+    </div>
+    
+    <div id="errorMessage" class="hidden error-msg">
+        Internal Server Error. Please try again later.
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
